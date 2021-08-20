@@ -1,17 +1,21 @@
-const LocationInfoBox = ({ info }) => {
+const LocationInfoBox = ({ info, closeInfo }) => {
   return (
     <div className="location-info">
-      <h2>Event Location Info</h2>
-      <ul>
-        <li>
-          ID:
-          <strong>{info.id}</strong>
-        </li>
-        <li>
-          TITLE:
-          <strong>{info.title}</strong>
-        </li>
-      </ul>
+      <div className="info-container">
+        <h2>Natural Event Info</h2>
+        <ul>
+          <li className="info-id">
+            ID:
+            <strong className="info-id">{info.id}</strong>
+          </li>
+          <li>
+            <strong>{info.title}</strong>
+          </li>
+        </ul>
+        <button className="close-btn" onClick={closeInfo}>
+          &times;
+        </button>
+      </div>
     </div>
   )
 }
