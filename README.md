@@ -4,13 +4,14 @@
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://wild-earth-ushisha.netlify.app/](https://wild-earth-ushisha.netlify.app/)
 
 ## My process
 
 ### Built with
 
-- [React](https://reactjs.org/) - JS library -[NasaAPI](https://api.nasa.gov/)
+- [React](https://reactjs.org/) -JS library 
+- [NasaAPI](https://api.nasa.gov/)
 
 ### Useful resources
 
