@@ -1,4 +1,12 @@
 const LocationInfoBox = ({ info, closeInfo }) => {
+  const isoDate = new Date(info.date)
+  const date =
+    isoDate.getDate() +
+    '-' +
+    (isoDate.getMonth() + 1) +
+    '-' +
+    isoDate.getFullYear()
+
   return (
     <div className="location-info">
       <div className="info-container">
@@ -11,6 +19,7 @@ const LocationInfoBox = ({ info, closeInfo }) => {
           <li>
             <strong>{info.title}</strong>
           </li>
+          <li>Reported:{date}</li>
         </ul>
         <button className="close-btn" onClick={closeInfo}>
           &times;

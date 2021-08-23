@@ -1,10 +1,14 @@
+import AboutModal from './AboutModal'
 const Header = () => {
   return (
-    <header className="header">
-      <h1>
-        Wild Earth <span>(Powered by NASA)</span>
-      </h1>
-    </header>
+    <>
+      <header className="header">
+        <h1>
+          Wild Earth <span>(Powered by NASA)</span>
+        </h1>
+        <AboutModal />
+      </header>
+    </>
   )
 }
 

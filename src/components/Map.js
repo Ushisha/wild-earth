@@ -5,6 +5,7 @@ import LocationInfoBox from './LocationInfoBox'
 
 const Map = ({ eventData, center, zoom }) => {
   const [locationInfo, setLocationInfo] = useState(null)
+
   const markers = eventData.map((ev) => {
     if (
       ev.categories[0].id === 8 ||
@@ -15,7 +16,6 @@ const Map = ({ eventData, center, zoom }) => {
         <LocationMaker
           key={ev.id}
           categories={ev.categories[0].id}
-          
           lat={
             ev.geometries[0].coordinates.length === 2
               ? ev.geometries[0].coordinates[1]
@@ -26,21 +26,24 @@ const Map = ({ eventData, center, zoom }) => {
               ? ev.geometries[0].coordinates[0]
               : ev.geometries[0].coordinates[0][0][0]
           }
-          onClick={() => setLocationInfo({ id: ev.id, title: ev.title })}
+          onClick={() =>
+            setLocationInfo({
+              id: ev.id,
+              title: ev.title,
+              date: ev.geometries[0].date,
+            })
+          }
         />
       )
     }
     return null
   })
 
-  const closeInfo =()=>{
+  const closeInfo = () => {
     setLocationInfo(null)
   }
 
-
-
-
-  return(
+  return (
     <div className="map">
       <GoogleMapReact
         bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_API_KEY }}
@@ -49,7 +52,9 @@ const Map = ({ eventData, center, zoom }) => {
       >
         {markers}
       </GoogleMapReact>
-      {locationInfo && <LocationInfoBox info={locationInfo} closeInfo={closeInfo}/>}
+      {locationInfo && (
+        <LocationInfoBox info={locationInfo} closeInfo={closeInfo} />
+      )}
     </div>
   )
 }
