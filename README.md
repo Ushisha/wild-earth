@@ -1,6 +1,6 @@
 ## Wild Earth
 
-This is a project to track natural events happening on earth by using a NASA's API The Earth Observatory Natural Event Tracker (EONET).
+This is a project to track natural events happening on earth right now by using a NASA's API The Earth Observatory Natural Event Tracker (EONET).
 
 ### Screenshot
 
