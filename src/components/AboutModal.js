@@ -12,9 +12,9 @@ const AboutModal = () => {
         <div id="target-inner" className="about-container">
           <h2>About This Project</h2>
           <p>
-            This is a project to track and provide natural events happening on
-            earth by using a NASA's API The Earth Observatory Natural Event
-            Tracker (EONET) which is continuously updated natural event
+            This is a project to track and provide natural events currently
+            happening on earth by using NASA's API The Earth Observatory Natural
+            Event Tracker (EONET), which is continuously updated natural event
             metadata.
           </p>
           <p>Click event icons on the map to see event info.</p>
