@@ -10,6 +10,9 @@ const AboutModal = () => {
       <div id="target-content" className="about-modal">
         <a href="#" className="close"></a>
         <div id="target-inner" className="about-container">
+          <a href="#" className="close-about">
+            &times;
+          </a>
           <h2>About This Project</h2>
           <p>
             This is a project to track and provide natural events currently
